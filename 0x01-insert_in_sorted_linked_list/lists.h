@@ -2,6 +2,11 @@
 #define _LISTS_
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <stddef.h>
+#include <stddef.h>
+
 /**
  * struct listint_s - singly linked list
  * @n: integer
@@ -10,6 +15,7 @@
  * Description: singly linked list node structure
  * for Holberton project
  */
+
 typedef struct listint_s
 {
     int n;
@@ -23,8 +29,6 @@ listint_t *insert_node(listint_t **head, int number);
 listint_t *add_nodeint_end(listint_t **head, const int n);
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
+
 
 #endif /* _LISTS_ */

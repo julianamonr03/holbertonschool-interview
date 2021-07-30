@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * Function in C that inserts a number into a sorted singly linked list.
  * @head: Head of the node in list
@@ -8,19 +7,22 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-    listint_t *current;
+    listint_t *temp = *head;
     listint_t *new = malloc(sizeof(listint_t));
+
+    new->n = number;
 
     if (!new)
     {
         return (NULL);
     }
 
-    current = *head;
-
-    while (current->next != NULL && current->next->n < number)
+    while (temp->next != NULL && temp->next->n < new->n)
     {
-        current = current->next;
+        temp = temp->next;
     }
+    new->next = temp->next;
+    temp->next = new;
+    return (new);
 
 }
