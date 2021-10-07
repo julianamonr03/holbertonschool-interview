@@ -1,6 +1,5 @@
 #include "menger.h"
-#include <stdio.h>
-#include <math.h>
+
 /**
  * aux - Checks if indices are (1, 1)
  * @i: Row
