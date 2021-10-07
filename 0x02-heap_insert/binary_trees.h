@@ -28,5 +28,10 @@ typedef struct binary_tree_s heap_t;
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
+int _height(const binary_tree_t *tree);
+void greater_than_parent(heap_t **father, heap_t **son);
+int is_perfect(const binary_tree_t *root);
+heap_t *heap_insert(heap_t **root, int value);
+
 
 #endif /* __BINARY_TREE__ */
